@@ -1,0 +1,33 @@
+{
+  "name": "portfolio.me",
+  "version": "1.0.0",
+  "description": "This is my personal website to show off my work and the projects I am working on. It serves as a portal for my personal blog as well.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CedricMurairi/portfolio.me.git"
+  },
+  "keywords": [
+    "node.js",
+    "moustache",
+    "javascript",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Cédric Murairi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CedricMurairi/portfolio.me/issues"
+  },
+  "homepage": "https://github.com/CedricMurairi/portfolio.me#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}

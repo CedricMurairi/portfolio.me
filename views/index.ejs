@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('_head', {title: "Home"}) %>
 <body>
-    <%- include('_header') %>
+    <div class="container">
+        <%- include('_header') %>
+        <div class="welcome-banner">
+            <div>
+                <h1 class="mb-4">Welcome</h1>
+                <p>I am Cédric Murairi a Junior Engineer | Software Engineer from Congo (DRC) living in Rwanda.
+                <br>
+                Stay for a minute and check out my work and other activities!
+                </p>
+            </div>
+            <img src="images/cedric_photo-cartoon--update-1.png" width="400px" alt="Cedric Murairi image">
+        </div>
+        <div class="about">
+            <h2>About Me</h2>
+            <p>
+                <strong>Junior Engineer | Software Engineer</strong>, I build software and embedded software; I mainly write scripts in 3 programming languages, <strong>Python&Flask&Django</strong>, <strong>Javascript&Node&React</strong>, and <strong>C</strong>. Fun fact, I am a <strong>Linux</strong> user and currently learning <strong>GoLang</strong>.
+                I am open-minded and a great team player. I am a stern believer that Curiosity and Perseverance matter for any problem-solving.
+                <br>
+                Apart from that, I like to build things that turn very fast and burn very hot. I have a growing passion of Embedded Systems, Mechatronics, and Space ✨️.
+                <br>
+                I play music, and I design for fun; I like working with Sonic Pi to learn while entertaining. I enjoy Photography and going out to do awesome things, like "Hiking." 😀️🌍️
+            </p>
+        </div>
+        <div class="education">
+            <h2>Education</h2>
+            <h4>African Leadershi University | Computer Science</h4>
+            <p>Courses & Activities: Data and Decisions | Web Development | Data Structure&Algorithms | Computer Architecture | Programming 1 (Python) | Programming 2 (Java) | Database Design | Mathematical Foundation of Computing | Discrete Mathematics</p>
+        </div>
+        <div class="technology">
+            <h2>Tools&Technologies</h2>
+            <div class="tech-tools">
+                <img src="https://img.icons8.com/color/96/000000/python.png"/>
+                <img src="https://img.icons8.com/color/96/000000/javascript.png"/>
+                <img src="https://img.icons8.com/color/96/000000/html-5--v1.png"/>
+                <img src="https://img.icons8.com/color/96/000000/css3.png"/>
+                <img src="https://img.icons8.com/color/48/000000/sass.png"/>
+                <img src="https://img.icons8.com/color/96/000000/react-native.png"/>
+                <img src="https://img.icons8.com/color/96/000000/postgreesql.png"/>
+                <img src="https://img.icons8.com/nolan/96/flask.png"/>
+                <img src="https://img.icons8.com/color/96/000000/heroku.png"/>
+                <img src="https://img.icons8.com/color/96/000000/git.png"/>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                width="100" height="100"
+                viewBox="0 0 172 172"
+                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#34495e"><path d="M61.20104,161.11584c2.44584,-1.05264 4.15896,-3.48472 4.15896,-6.31584v-18.576c0,-0.67768 0.05504,-1.38288 0.14104,-2.0984c-0.04816,0.01376 -0.09288,0.02408 -0.14104,0.0344c0,0 -10.32,0 -12.384,0c-5.16,0 -9.632,-2.064 -11.696,-6.192c-2.408,-4.472 -3.44,-12.04 -9.632,-16.168c-1.032,-0.688 -0.344,-1.72 1.72,-1.72c2.064,0.344 6.536,3.096 9.288,6.88c3.096,3.784 6.192,6.88 11.696,6.88c8.55528,0 13.1408,-0.43 15.89968,-1.9092c3.21296,-4.77816 7.66088,-8.4108 12.30832,-8.4108v-0.086c-19.49792,-0.62608 -31.95416,-7.10704 -37.754,-17.114c-12.6076,0.14448 -23.58464,1.3932 -29.84888,2.43208c-0.19952,-1.12488 -0.37152,-2.25664 -0.51944,-3.39528c6.18168,-1.01824 16.65992,-2.22568 28.7068,-2.45616c-0.38528,-0.94944 -0.71896,-1.92296 -1.00104,-2.92056c-12.07784,-0.61232 -22.50104,-0.13416 -28.16328,0.33368c-0.0688,-1.14208 -0.16168,-2.28072 -0.17544,-3.43656c5.67256,-0.4644 15.81368,-0.9288 27.58192,-0.38184c-0.27176,-1.72 -0.4472,-3.47784 -0.4472,-5.30792c0,-5.848 2.064,-12.04 5.848,-17.2c-1.72,-5.848 -4.128,-18.232 0.688,-22.704c9.288,0 15.824,4.472 18.92,7.224c5.84456,-2.41144 12.38056,-3.78744 19.60456,-3.78744c7.224,0 13.76,1.376 19.264,3.784c3.096,-2.752 9.632,-7.224 18.92,-7.224c5.16,4.816 2.408,17.2 0.688,22.704c3.784,5.16 5.848,11.008 5.504,17.2c0,1.66496 -0.1548,3.27144 -0.3784,4.84696c12.03656,-0.59168 22.45288,-0.11696 28.22176,0.35088c-0.00688,1.15928 -0.11352,2.29104 -0.17544,3.43656c-5.74824,-0.47472 -16.426,-0.9632 -28.75496,-0.30616c-0.30616,1.15584 -0.67768,2.28072 -1.118,3.3712c12.19824,0.15824 22.9276,1.33816 29.40512,2.37016c-0.14792,1.14208 -0.31992,2.27384 -0.51944,3.39528c-6.57728,-1.05264 -17.78824,-2.28416 -30.54376,-2.34608c-5.7276,9.90032 -17.9568,16.3572 -37.07288,17.11056v0.10664c8.944,0 17.2,13.416 17.2,22.704v18.576c0,2.83112 1.71312,5.2632 4.15896,6.31584c31.51384,-10.43008 54.32104,-40.15168 54.32104,-75.11584c0,-43.62608 -35.49048,-79.12 -79.12,-79.12c-43.62952,0 -79.12,35.49392 -79.12,79.12c0,34.96416 22.8072,64.68576 54.32104,75.11584z"></path></g></g></svg>
+                <img src="https://img.icons8.com/color/96/000000/flutter.png"/>
+                <img src="https://img.icons8.com/color/96/000000/dart.png"/>
+                <img src="https://img.icons8.com/color/96/000000/nodejs.png"/>
+                <img src="https://img.icons8.com/color/48/000000/linux.png"/>
+                <img src="https://img.icons8.com/color/96/000000/django.png"/>
+                <img src="https://img.icons8.com/color/96/000000/bootstrap.png"/>
+            </div>
+        </div>
+        <%- include('_footer') %>
+    </div>
 </body>
 </html>

@@ -15,6 +15,10 @@ app.get('/projects', (req, res) => {
     res.render('projects')
 })
 
+app.get('/experiences', (req, res) => {
+    res.render('experiences')
+})
+
 app.use('/blog', blog)
 app.use(express.static('public'))
 

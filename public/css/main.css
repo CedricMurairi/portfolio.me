@@ -161,3 +161,7 @@ button:hover{
 .project-img:hover{
     opacity: 0.5;
 }
+
+.articles, .activities{
+    height: 80vh;
+}

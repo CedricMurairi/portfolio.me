@@ -124,15 +124,40 @@ p, .experiences li{
     position: relative;
 }
 
-.resume{
+button{
     border: none;
     outline: none;
     border-radius: 3px;
+    background-color: rgb(100, 100, 100);
+}
+
+button:hover{
+    box-shadow: 1px 1px 10px rgba(202, 202, 202, 0.3);
+}
+
+.resume{
     position: absolute;
     top: 0;
     right: 0;
     margin: 10px 10px;
     color: white;
-    background-color: rgb(100, 100, 100);
+    opacity: 0.5;
+}
+
+.project{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    overflow: hidden;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.project-img{
+    opacity: 0.3;
+}
+
+.project-img:hover{
     opacity: 0.5;
 }

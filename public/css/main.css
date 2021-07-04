@@ -1,6 +1,11 @@
 body{
     background-color: black;
     font-family: 'Montserrat', sans-serif;
+    min-width: 370px;
+}
+
+h1{
+    color: #263238;
 }
 
 body::-webkit-scrollbar {
@@ -14,6 +19,7 @@ body {
 }
 
 .container{
+    position: relative;
     width: 70%;
     margin: auto;
 }
@@ -69,20 +75,31 @@ footer{
     padding-bottom: 10px;
 }
 
+footer img, footer svg{
+    opacity: 0.5;
+}
+
+footer img:hover, footer svg:hover{
+    opacity: 1;
+}
+
 .welcome-banner{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    align-items: center;
+    text-align: center;
+    /* height: 90vh; */
+    margin-bottom: 50px;
 }
 
 .welcome-banner img{
     opacity: 0.5;
+    width: 25%;
+}
+
+.welcome-banner img:hover{
+    opacity: 1;
 }
 
 .welcome-banner p{
     font-size: 20px;
-    font-weight: bold;
     color: #e6e4e1;
 }
 
@@ -132,7 +149,7 @@ button{
 }
 
 button:hover{
-    box-shadow: 1px 1px 10px rgba(202, 202, 202, 0.3);
+    box-shadow: 1px 1px 5px rgba(202, 202, 202, 0.3);
 }
 
 .resume{
@@ -164,4 +181,98 @@ button:hover{
 
 .articles, .activities{
     height: 80vh;
+}
+
+.bottom-navigation{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0);
+    width: 100%;
+    box-shadow: 1px 1px 3px white;
+    justify-content: center;
+    align-content: center;
+    display: none;
+}
+
+.bottom-navigation .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.bottom-navigation .container svg{
+    opacity: 0.8;
+}
+
+.bottom-navigation .container svg:hover{
+    opacity: 1;
+}
+
+.call-to-action{
+    margin-top: 20px;
+}
+
+.contact-form{
+    width: 50%;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav{
+        display: none;
+    }
+
+    .bottom-navigation{
+        display: flex;
+        height: 7vh;
+    }
+    
+    footer{
+        margin-bottom: 20px;
+    }
+
+    .contact-form{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .welcome-banner p{
+        font-size: 15px;
+    }
+
+    .welcome-banner img{
+        width: 50%;
+    }
+
+    .tech-tools img, .tech-tools svg{
+        width: 15%;
+    }
+
+    .logo{
+        font-size: 30px;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .bottom-navigation{
+        display: flex;
+        height: 7vh;
+    }
+
+    footer{
+        margin-bottom: 70px;
+    }
+
+    .contact-form{
+        width: 100%;
+    }
 }

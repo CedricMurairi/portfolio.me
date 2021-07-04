@@ -4,6 +4,10 @@ body{
     min-width: 370px;
 }
 
+h1{
+    color: #263238;
+}
+
 body::-webkit-scrollbar {
     display: none;
 }

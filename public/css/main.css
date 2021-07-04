@@ -14,6 +14,7 @@ body {
 }
 
 .container{
+    position: relative;
     width: 70%;
     margin: auto;
 }
@@ -164,4 +165,57 @@ button:hover{
 
 .articles, .activities{
     height: 80vh;
+}
+
+.bottom-navigation{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0);
+    width: 100%;
+    padding: 0 10px;
+    box-shadow: 1px 1px 3px white;
+    justify-content: center;
+    align-content: center;
+    display: none;
+}
+
+.bottom-navigation .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    
+    
+}
+
+@media only screen and (max-width: 1000px) {
+    nav{
+        display: none;
+    }
+
+    .bottom-navigation{
+        display: flex;
+        height: 7vh;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .logo{
+        font-size: 30px;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .bottom-navigation{
+        display: flex;
+        height: 7vh;
+    }
 }

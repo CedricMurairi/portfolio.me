@@ -197,13 +197,17 @@ button:hover{
 }
 
 .bottom-navigation .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 .bottom-navigation .container svg{
     opacity: 0.8;
+}
+
+.bottom-navigation .container a{
+    width: fit-content;
+    align-self: center;
 }
 
 .bottom-navigation .container svg:hover{

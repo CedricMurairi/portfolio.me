@@ -4,9 +4,10 @@ body{
     min-width: 370px;
 }
 
-h1{
-    color: #263238;
-}
+/* h1, h2, h5{
+    color: wheat;
+    opacity: 0.5;
+} */
 
 body::-webkit-scrollbar {
     display: none;
@@ -90,15 +91,16 @@ footer img:hover, footer svg:hover{
 }
 
 .welcome-banner img{
-    opacity: 0.5;
+    opacity: 0.8;
     width: 25%;
 }
 
 .welcome-banner img:hover{
-    opacity: 1;
+    opacity: 0.5;
 }
 
 .welcome-banner p{
+    opacity: 0.8;
     font-size: 20px;
     color: #e6e4e1;
 }
@@ -113,6 +115,10 @@ p, .experiences li{
 
 .tech-tools{
     opacity: 0.5;
+}
+
+.tech-tools h5{
+    margin-top: 10px;
 }
 
 .hidden{
@@ -142,7 +148,8 @@ p, .experiences li{
 }
 
 .experiences li{
-    background-color: #263238;
+    padding: 3px 10px;
+    background-color: rgba(38, 50, 56, 0.2);
     margin-bottom: 5px;
 }
 
@@ -150,11 +157,7 @@ button{
     border: none;
     outline: none;
     border-radius: 3px;
-    background-color: rgb(100, 100, 100);
-}
-
-button:hover{
-    box-shadow: 1px 1px 5px rgba(202, 202, 202, 0.3);
+    background-color: wheat;
 }
 
 .resume{
@@ -162,14 +165,11 @@ button:hover{
     top: 0;
     right: 0;
     margin: 10px 10px;
-    color: white;
-    opacity: 0.5;
 }
 
 .project{
     position: relative;
     display: grid;
-    
     grid-template-rows: auto;
     grid-gap: 20px;
     align-items: center;
@@ -185,12 +185,16 @@ button:hover{
 }
 
 .project-img img{
-    opacity: 0.3;
+    opacity: 0.8;
     width: 100%;
 }
 
 .project-img:hover{
     opacity: 0.5;
+}
+
+.project-detail{
+    color: wheat;
 }
 
 .articles, .activities{
@@ -238,6 +242,10 @@ button:hover{
 
 .contact-form{
     width: 50%;
+}
+
+.contact-form form{
+    opacity: 0.8;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -289,6 +297,10 @@ button:hover{
         width: 100%;
     }
 
+    header+hr{
+        display: none;
+    }
+
     nav{
         display: none;
     }
@@ -303,7 +315,8 @@ button:hover{
     }
 
     .contact-form{
-        width: 100%;
+        margin: auto;
+        width: 90%;
     }
 
     button{

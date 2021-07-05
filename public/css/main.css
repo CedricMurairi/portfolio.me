@@ -141,6 +141,11 @@ p, .experiences li{
     position: relative;
 }
 
+.experiences li{
+    background-color: #263238;
+    margin-bottom: 5px;
+}
+
 button{
     border: none;
     outline: none;
@@ -162,17 +167,26 @@ button:hover{
 }
 
 .project{
+    position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    
     grid-template-rows: auto;
     grid-gap: 20px;
-    overflow: hidden;
     align-items: center;
     margin-bottom: 50px;
 }
 
-.project-img{
+.project:nth-child(odd){
+    grid-template-columns: 1fr 2fr;
+}
+
+.project:nth-child(even){
+    grid-template-columns: 2fr 1fr;
+}
+
+.project-img img{
     opacity: 0.3;
+    width: 100%;
 }
 
 .project-img:hover{
@@ -181,6 +195,10 @@ button:hover{
 
 .articles, .activities{
     height: 80vh;
+}
+
+.alias-details{
+    display: none;
 }
 
 .bottom-navigation{
@@ -197,13 +215,17 @@ button:hover{
 }
 
 .bottom-navigation .container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 .bottom-navigation .container svg{
     opacity: 0.8;
+}
+
+.bottom-navigation .container a{
+    width: fit-content;
+    align-self: center;
 }
 
 .bottom-navigation .container svg:hover{
@@ -235,12 +257,20 @@ button:hover{
     .contact-form{
         width: 100%;
     }
+
+    .project-detail{
+        font-size: 12px;
+    }
 }
 
 
 @media only screen and (max-width: 700px) {
     .welcome-banner p{
         font-size: 15px;
+    }
+
+    .resume{
+        font-size: 10px;
     }
 
     .welcome-banner img{
@@ -274,5 +304,22 @@ button:hover{
 
     .contact-form{
         width: 100%;
+    }
+
+    button{
+        margin-bottom: 5px;
+    }
+
+    .project{
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .alias-details{
+        display: block;
+    }
+
+    .tbd-details{
+        display: none;
     }
 }

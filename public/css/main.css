@@ -277,6 +277,10 @@ button{
         font-size: 15px;
     }
 
+    .about{
+        text-align: justify;
+    }
+
     .resume{
         font-size: 10px;
     }

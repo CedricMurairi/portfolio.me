@@ -201,6 +201,13 @@ button{
     height: 80vh;
 }
 
+.authentication{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .alias-details{
     display: none;
 }
@@ -240,12 +247,30 @@ button{
     margin-top: 20px;
 }
 
-.contact-form{
+.contact-form, .admin-login{
     width: 50%;
 }
 
-.contact-form form{
-    opacity: 0.8;
+input, textarea{
+    background-color: rgba(38, 50, 56, 0.3) !important;
+    border: none !important;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+    border: none;
+    background-color: rgba(38, 50, 56, 0.3);
+}
+
+textarea{
+    padding: 20px 20px;
+}
+
+input::placeholder, textarea::placeholder, input, textarea{
+    color: gainsboro !important;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -262,7 +287,7 @@ button{
         margin-bottom: 20px;
     }
 
-    .contact-form{
+    .contact-form, .admin-login{
         width: 100%;
     }
 
@@ -318,7 +343,7 @@ button{
         margin-bottom: 70px;
     }
 
-    .contact-form{
+    .contact-form, .admin-login{
         margin: auto;
         width: 90%;
     }

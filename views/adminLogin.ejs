@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('_head', {title: "Cedric Murairi | Portfolio.me"}) %>
+<body>
+    <div class="container">
+        <%- include('_header') %>
+        <div class="authentication">
+            <div id="admin-login" class="admin-login">
+                <h2>Admin Login</h2>
+                <form action="/admin-login" method="POST">
+                    <p><input name="email" required type="email" placeholder="Email"></p>
+                    <p><input name="password" required type="password" placeholder="Password"></p>
+                    <p><button>Authenticate</button></p>
+                </form>
+            </div>
+        </div>
+        <%- include('_footer') %>
+    </div>
+</body>
+</html>

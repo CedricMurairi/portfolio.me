@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('_head', {title: "Experiences"}) %>
+<body>
+    <div class="container">
+        <%- include('_header') %>
+        <div class="messages">
+            <%- messages.forEach(message => {%>
+                <h2><%= message.subject %></h2>
+            <%- }); %>
+        </div>
+        <%- include('_footer') %>
+    </div>
+    <script src="javascript/main.js"></script>
+</body>
+</html>

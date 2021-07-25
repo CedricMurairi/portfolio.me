@@ -4,13 +4,18 @@
 <body>
     <div class="container">
         <%- include('_header') %>
+        <h1>Messages</h1>
         <div class="messages">
-            <%- messages.forEach(message => {%>
-                <h2><%= message.subject %></h2>
-            <%- }); %>
+            <% messages.forEach((message) => { %>
+                <div>
+                    <h2><%= message.subject %></h2>
+                    <p><%= message.text %></p>
+                    <h6><%= message.sender %> | <%= message.email %></h6>
+                </div>
+            <% }); %>
         </div>
         <%- include('_footer') %>
     </div>
-    <script src="javascript/main.js"></script>
+    <script src="/javascript/main.js"></script>
 </body>
 </html>

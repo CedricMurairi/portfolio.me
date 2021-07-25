@@ -7,7 +7,10 @@
         <div class="authentication">
             <div id="admin-login" class="admin-login">
                 <h2>Admin Login</h2>
-                <form action="/admin-login" method="POST">
+                <% if (messages.error) { %>
+                    <h4><%= messages.error %></h4>
+                <% } %>
+                <form action="/admin/login" method="POST">
                     <p><input name="email" required type="email" placeholder="Email"></p>
                     <p><input name="password" required type="password" placeholder="Password"></p>
                     <p><button>Authenticate</button></p>

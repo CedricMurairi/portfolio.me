@@ -134,6 +134,21 @@ p, .experiences li{
     animation: pop-in 0.2s normal;
 }
 
+.messages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.messages div {
+    padding: 15px 50px;
+    border-radius: 5px;
+    background-color: rgba(38, 50, 56, 0.3);
+}
+
 @keyframes pop-in{
     0%{opacity: 0; transform: scale(0);}
     100%{opacity: 1; transform: scale(1);}
@@ -156,8 +171,9 @@ p, .experiences li{
 button{
     border: none;
     outline: none;
-    border-radius: 3px;
     background-color: wheat;
+    border-radius: 20px;
+    padding: 5px 20px;
 }
 
 .resume{
@@ -251,6 +267,10 @@ button{
     width: 50%;
 }
 
+.admin-login h2 {
+    margin-bottom: 50px;
+}
+
 input, textarea{
     background-color: rgba(38, 50, 56, 0.3) !important;
     border: none !important;
@@ -298,6 +318,14 @@ input::placeholder, textarea::placeholder, input, textarea{
 
 
 @media only screen and (max-width: 700px) {
+    .messages {
+        grid-template-columns: 1fr;
+    }
+
+    .messages div {
+        padding: 15px 20px;
+    }
+
     .welcome-banner p{
         font-size: 15px;
     }

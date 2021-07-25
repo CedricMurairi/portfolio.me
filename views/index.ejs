@@ -62,17 +62,18 @@
             </div>
         </div>
         <div id="contact" class="contact-form">
-            <h2>Contact Me</h2>
+            <h2 class="contact_header">Contact Me</h2>
             <p><%= message %></p>
-            <form action="contact-me" method="POST">
-                <p><input name="name" required type="text" placeholder="Name"></p>
-                <p><input name="email" required type="email" placeholder="Email"></p>
-                <p><input name="title" required type="text" placeholder="Subject | Title"></p>
-                <p><textarea name="message" required id="message" cols="30" rows="10" placeholder="Your message here"></textarea></p>
-                <p><button>Say Hi!</button></p>
+            <form id="contact-me-form">
+                <p><input class="contact_name" name="name" required type="text" placeholder="Name"></p>
+                <p><input class="contact_email" name="email" required type="email" placeholder="Email"></p>
+                <p><input class="contact_title" name="title" required type="text" placeholder="Subject | Title"></p>
+                <p><textarea class="contact_message" name="message" required id="message" cols="30" rows="10" placeholder="Your message here"></textarea></p>
+                <p><button class="contact_submit_btn">Say Hi!</button></p>
             </form>
         </div>
         <%- include('_footer') %>
     </div>
+    <script src="/javascript/main.js"></script>
 </body>
 </html>

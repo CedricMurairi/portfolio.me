@@ -1,5 +1,7 @@
 import express from "express"
 import passport from "passport"
+import { getMessages } from '../controllers/messageController.js'
+import { getUsers } from '../controllers/userController.js'
 import bcrypt from 'bcrypt'
 
 const admin = express.Router()
@@ -8,7 +10,7 @@ const admin = express.Router()
 //     res.redirect('/admin/messages')
 // })
 
-admin.get('/login', (req, res) => {
+admin.get('/login', checkNotAuthenticated, (req, res) => {
     res.render('adminLogin')
 })
 
@@ -24,7 +26,7 @@ admin.get('/logout', (req, res) => {
 })
 
 admin.get('/messages', checkAuthenticated, async (req, res) => {
-    let messages = await messageController.getMessages()
+    let messages = await getMessages()
     res.render('messages', { messages: messages })
 })
 

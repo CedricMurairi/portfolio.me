@@ -29,10 +29,6 @@ window.onload = () => {
                 'title': title,
                 'message': message
             }
-        
-            console.log(data)
-            console.log(JSON.stringify(data))
-        
             fetch('/contact-me', {
                 method: 'POST',
                 body: JSON.stringify(data),
@@ -51,4 +47,30 @@ window.onload = () => {
             });
         });
     }
+
+    let deleteBtns = document.querySelectorAll('.delete-message')
+
+    deleteBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            btn.innerHTML = `
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            `;
+            fetch('/admin/messages', {
+                method: 'DELETE',
+                body: JSON.stringify({id: btn.dataset.id}),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => response.json()
+            .then(data => {
+                console.log(data)
+                btn.parentElement.parentElement.remove();
+                document.querySelector('.messages-header').innerText = `${data.message}`;
+            }))
+            .catch (e => {
+                console.log(e)
+            });
+        })
+    })
 }

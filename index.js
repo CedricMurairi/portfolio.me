@@ -34,11 +34,11 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use(bodyParser.json())
 
-if (process.env.PROD) {
-    app.get('*', function(req, res) {  
-        res.redirect('https://' + req.headers.host + req.url);
-    })
-}
+// if (process.env.PROD) {
+//     app.get('*', function(req, res) {  
+//         res.redirect('https://' + req.headers.host + req.url);
+//     })
+// }
 
 app.get('/', (req, res) => {
     res.render('index', { message: "" })

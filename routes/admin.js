@@ -1,8 +1,6 @@
 import express from "express"
 import passport from "passport"
-import { getMessages } from '../controllers/messageController.js'
-import { getUsers } from '../controllers/userController.js'
-import bcrypt from 'bcrypt'
+import { deleteMessage, getMessages } from '../controllers/messageController.js'
 
 const admin = express.Router()
 
@@ -28,6 +26,21 @@ admin.get('/logout', (req, res) => {
 admin.get('/messages', checkAuthenticated, async (req, res) => {
     let messages = await getMessages()
     res.render('messages', { messages: messages })
+})
+
+admin.delete('/messages', checkAuthenticated, async (req, res) => {
+    let response  = await deleteMessage(req.body.id)
+    if (response) {
+        res.status(200).json({
+            success: true,
+            message: "Message deleted"
+        })
+    }else{
+        res.status(400).json({
+            success: false,
+            message: "Bad Request!"
+        })
+    }
 })
 
 function checkAuthenticated(req, res, next) {

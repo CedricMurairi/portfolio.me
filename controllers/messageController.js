@@ -25,3 +25,15 @@ export async function saveMessage (data) {
         return false
     }
 }
+
+export async function deleteMessage (id) {
+    const message = await Message.findOne({where: {message_id: id}})
+    if (!message) {return false}
+    try {
+        await message.destroy()
+        return true
+    }catch (e) {
+        console.log(e);
+        return false
+    }
+}

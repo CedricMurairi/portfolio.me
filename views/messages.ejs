@@ -4,11 +4,12 @@
 <body>
     <div class="container">
         <%- include('_header') %>
-        <h1>Messages</h1>
+        <h1 class="messages-header">Messages</h1>
         <div class="messages">
             <% messages.forEach((message) => { %>
                 <div>
-                    <h2><%= message.subject %></h2>
+                    <h2><%= message.subject %>
+                        <span data-id=<%= message.message_id %> class="delete-message"><img src="/images/trash.png" /></span></h2>
                     <p><%= message.text %></p>
                     <h6><%= message.sender %> | <%= message.email %></h6>
                 </div>

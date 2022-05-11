@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Image from "next/image";
-import UnderDevGif from "/assets/gifs/under-dev.gif";
+import UnderDevGif from "/public/assets/gifs/under-dev.gif";
 import { FaLinkedin, FaGithubSquare, FaEnvelope } from "react-icons/fa";
 import Link from "next/link";
 

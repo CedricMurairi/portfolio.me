@@ -1,49 +1,58 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import UnderDevGif from "/public/assets/gifs/under-dev.gif";
-import { FaLinkedin, FaGithubSquare, FaEnvelope } from "react-icons/fa";
+import MyPicture from "/public/favicon.ico";
+import { FaLinkedin, FaGithubSquare, FaTwitterSquare } from "react-icons/fa";
 import Link from "next/link";
+import Head from "next/head";
 
 export function UnderDev () {
-
-    const email = useRef(null);
-    const saveEmail = () => {
-        const emailValue = email.current.value;
-        console.log(emailValue);
-    }
+    const description = "Portfolio Website | Cédric Murairi | Progressive Engineering. I share my all my work and adventures from engineering to education, farming and craftsmanship to my everyday activities and future projects";
+    const title = "Software Engineering, Web Development, Mobile App Deveopment | Cédric Murairi"
 
     return (
-        <div className="h-screen flex flex-col justify-center items-center w-4/6 m-auto">
-            <div>
-                <h1 className="text-xl">My portfolio website is under development</h1>
-                <p className="text-sm text-gray-400">
-                    We are currently working on improving the user experience and automating quick actions
-                </p>
-            </div>
-            <Image src={UnderDevGif} alt="Alt Ghost is under development" />
-            <div>
-                <p className="mt-4">As you wait you can check me here instead</p>
-                <div className="flex justify-start mt-2">
-                    <Link href="https://www.linkedin.com/in/cedric-murairi/" target="_blank">
-                        <a><FaLinkedin size={30} /></a>
-                    </Link>
-                    <Link href="https://github.com/CedricMurairi" target="_blank">
-                        <a><FaGithubSquare size={30} /></a>
-                    </Link>
+        <>
+            <Head>
+                <title>{title}</title>
+                <meta property="title" content={title} />
+                <meta property="og:title" content={title} />
+                <meta name="twitter:title" content={title} />  
+                <meta name="description" content={description} />  
+                <meta property="og:description" content={description} />   
+                <meta name="twitter:description" content={description} />  
+                <meta property="image" content="/favicon.png" />  
+                <meta property="og:image" content="/favicon.png" /> 
+                <meta name="twitter:image"content="/favicon.png" />
+                <link rel="icon" href="/favicon.png"></link>
+            </Head>
+            <div className="h-screen flex flex-col justify-center items-center w-4/6 m-auto">
+                <div>
+                    <h1 className="text-xl">My website is undergoing a redesign</h1>
+                    <p className="text-sm text-gray-400">
+                        Working on a new flow and series of automations making the experience better, providing more than just a portfolio.
+                    </p>
                 </div>
-                <p className="mt-4">Or leave me a message at{' '}
-                    <Link href="mailto:murairicedric@gmail.com">
-                        <a className="underline">murairicedric@gmail.com</a>
-                    </Link>
-                </p>
+                <Image src={UnderDevGif} alt="Under Development GIF" />
+                <div>
+                    <p className="mt-4 text-center">As you wait, please check me here instead</p>
+                    <div className="flex justify-center mt-2">
+                        <Link href="https://www.linkedin.com/in/cedric-murairi/" target="_blank">
+                            <a><FaLinkedin size={30} /></a>
+                        </Link>
+                        <Link href="https://github.com/CedricMurairi" target="_blank">
+                            <a><FaGithubSquare size={30} /></a>
+                        </Link>
+                        <Link href="https://twitter.com/CedricMurairi" target="_blank">
+                            <a><FaTwitterSquare size={30} /></a>
+                        </Link>
+                    </div>
+                    <p className="mt-4 text-center">Or leave me a message at{' '}
+                        <Link href="mailto:murairicedric@gmail.com">
+                            <a className="underline">murairicedric@gmail.com</a>
+                        </Link>
+                    </p>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
-// export default function UnderDev() {
-//     return (
-//         <div className="flex flex-col justify-center items-center">
-//             <UnderDevModal />
-//         </div>
-//     );
-// }

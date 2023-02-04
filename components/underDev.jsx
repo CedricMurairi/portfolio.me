@@ -36,15 +36,15 @@ export function UnderDev () {
                 <div>
                     <p className="mt-4 text-center">As you wait, please check me here instead</p>
                     <div className="flex justify-center mt-2">
-                        <Link href="https://www.linkedin.com/in/cedric-murairi/" target="_blank">
-                            <a><FaLinkedin size={30} /></a>
-                        </Link>
-                        <Link href="https://github.com/CedricMurairi" target="_blank">
-                            <a><FaGithubSquare size={30} /></a>
-                        </Link>
-                        <Link href="https://twitter.com/CedricMurairi" target="_blank">
-                            <a><FaTwitterSquare size={30} /></a>
-                        </Link>
+                        <a href="https://www.linkedin.com/in/cedric-murairi/" rel="noreferrer" target="_blank">
+                            <FaLinkedin size={30} />
+                        </a>
+                        <a href="https://github.com/CedricMurairi" rel="noreferrer" target="_blank">
+                            <FaGithubSquare size={30} />
+                        </a>
+                        <a href="https://twitter.com/CedricMurairi" rel="noreferrer" target="_blank">
+                            <FaTwitterSquare size={30} />
+                        </a>
                     </div>
                     <p className="mt-4 text-center">Or leave me a message at{' '}
                         <Link href="mailto:murairicedric@gmail.com">
